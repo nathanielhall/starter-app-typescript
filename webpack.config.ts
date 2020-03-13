@@ -15,7 +15,11 @@ const config: Configuration = {
 
   devtool: 'source-map',
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      components: path.resolve(__dirname, './src/components/'),
+      src: path.resolve(__dirname, './src/')
+    }
   },
 
   module: {
@@ -39,4 +43,6 @@ const config: Configuration = {
     })
   ]
 }
+
+// eslint-disable-next-line import/no-default-export
 export default config
