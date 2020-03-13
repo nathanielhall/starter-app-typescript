@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 
-export const App: FC = () => {
+export type AppProps = {}
+export const App: FC<AppProps> = () => {
   return (
     <React.Fragment>
       <header>Header</header>

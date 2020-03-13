@@ -1,9 +1,22 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
-import { App } from './app'
+import { mount, ReactWrapper } from 'enzyme'
+import { App, AppProps } from './app'
 
-test('renders without crashing', () => {
-  TestRenderer.create(<App />)
+const setup = (propOverrides?: Partial<AppProps>) => {
+  const props = {
+    // define props here
+    ...propOverrides
+  }
+  const wrapper: ReactWrapper = mount(<App {...props} />)
+  return {
+    props,
+    wrapper
+  }
+}
 
-  expect(true).toBeTruthy()
+test('<App />', () => {
+  const { wrapper } = setup()
+  expect(wrapper.exists()).toBeTruthy()
 })
+
+test.todo('more tests')
