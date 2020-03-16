@@ -56,7 +56,7 @@ module.exports = {
     // ================================================================================
     // '@typescript-eslint/no-empty-interface': 1,
     // '@typescript-eslint/no-namespace': 1,
-    // '@typescript-eslint/no-non-null-assertion': 0, // Disallows non-null assertions using the ! postfix operator
+    '@typescript-eslint/no-non-null-assertion': 0, // Disallows non-null assertions using the ! postfix operator
     // '@typescript-eslint/class-name-casing': 1, // STYLE - Require PascalCased class and interface names
     // '@typescript-eslint/no-unnecessary-type-assertion': 1, //Warns if a type assertion does not change the type of an expression
     // '@typescript-eslint/no-unnecessary-type-arguments': 1, // Enforces that types will not to be used
